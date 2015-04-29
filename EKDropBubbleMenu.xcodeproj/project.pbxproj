@@ -1,0 +1,432 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DBA03C9D1AF0168E002AC356 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA03C9C1AF0168E002AC356 /* AppDelegate.swift */; };
+		DBA03C9F1AF0168E002AC356 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA03C9E1AF0168E002AC356 /* ViewController.swift */; };
+		DBA03CA21AF0168E002AC356 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA03CA01AF0168E002AC356 /* Main.storyboard */; };
+		DBA03CA41AF0168E002AC356 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA03CA31AF0168E002AC356 /* Images.xcassets */; };
+		DBA03CA71AF0168E002AC356 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBA03CA51AF0168E002AC356 /* LaunchScreen.xib */; };
+		DBA03CB31AF0168F002AC356 /* EKDropBubbleMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA03CB21AF0168F002AC356 /* EKDropBubbleMenuTests.swift */; };
+		DBA03CBE1AF017DF002AC356 /* EKDropBubbleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA03CBD1AF017DF002AC356 /* EKDropBubbleMenu.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DBA03CAD1AF0168F002AC356 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBA03C8F1AF0168E002AC356 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBA03C961AF0168E002AC356;
+			remoteInfo = EKDropBubbleMenu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DBA03C971AF0168E002AC356 /* EKDropBubbleMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EKDropBubbleMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBA03C9B1AF0168E002AC356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBA03C9C1AF0168E002AC356 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DBA03C9E1AF0168E002AC356 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DBA03CA11AF0168E002AC356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DBA03CA31AF0168E002AC356 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DBA03CA61AF0168E002AC356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		DBA03CAC1AF0168F002AC356 /* EKDropBubbleMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EKDropBubbleMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBA03CB11AF0168F002AC356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBA03CB21AF0168F002AC356 /* EKDropBubbleMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKDropBubbleMenuTests.swift; sourceTree = "<group>"; };
+		DBA03CBD1AF017DF002AC356 /* EKDropBubbleMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EKDropBubbleMenu.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DBA03C941AF0168E002AC356 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBA03CA91AF0168F002AC356 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DBA03C8E1AF0168E002AC356 = {
+			isa = PBXGroup;
+			children = (
+				DBA03C991AF0168E002AC356 /* EKDropBubbleMenu */,
+				DBA03CAF1AF0168F002AC356 /* EKDropBubbleMenuTests */,
+				DBA03C981AF0168E002AC356 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DBA03C981AF0168E002AC356 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DBA03C971AF0168E002AC356 /* EKDropBubbleMenu.app */,
+				DBA03CAC1AF0168F002AC356 /* EKDropBubbleMenuTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DBA03C991AF0168E002AC356 /* EKDropBubbleMenu */ = {
+			isa = PBXGroup;
+			children = (
+				DBA03CBC1AF017D8002AC356 /* EKDropBubbleMenu */,
+				DBA03C9C1AF0168E002AC356 /* AppDelegate.swift */,
+				DBA03C9E1AF0168E002AC356 /* ViewController.swift */,
+				DBA03CA01AF0168E002AC356 /* Main.storyboard */,
+				DBA03CA31AF0168E002AC356 /* Images.xcassets */,
+				DBA03CA51AF0168E002AC356 /* LaunchScreen.xib */,
+				DBA03C9A1AF0168E002AC356 /* Supporting Files */,
+			);
+			path = EKDropBubbleMenu;
+			sourceTree = "<group>";
+		};
+		DBA03C9A1AF0168E002AC356 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBA03C9B1AF0168E002AC356 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DBA03CAF1AF0168F002AC356 /* EKDropBubbleMenuTests */ = {
+			isa = PBXGroup;
+			children = (
+				DBA03CB21AF0168F002AC356 /* EKDropBubbleMenuTests.swift */,
+				DBA03CB01AF0168F002AC356 /* Supporting Files */,
+			);
+			path = EKDropBubbleMenuTests;
+			sourceTree = "<group>";
+		};
+		DBA03CB01AF0168F002AC356 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBA03CB11AF0168F002AC356 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DBA03CBC1AF017D8002AC356 /* EKDropBubbleMenu */ = {
+			isa = PBXGroup;
+			children = (
+				DBA03CBD1AF017DF002AC356 /* EKDropBubbleMenu.swift */,
+			);
+			path = EKDropBubbleMenu;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DBA03C961AF0168E002AC356 /* EKDropBubbleMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBA03CB61AF0168F002AC356 /* Build configuration list for PBXNativeTarget "EKDropBubbleMenu" */;
+			buildPhases = (
+				DBA03C931AF0168E002AC356 /* Sources */,
+				DBA03C941AF0168E002AC356 /* Frameworks */,
+				DBA03C951AF0168E002AC356 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EKDropBubbleMenu;
+			productName = EKDropBubbleMenu;
+			productReference = DBA03C971AF0168E002AC356 /* EKDropBubbleMenu.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DBA03CAB1AF0168F002AC356 /* EKDropBubbleMenuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBA03CB91AF0168F002AC356 /* Build configuration list for PBXNativeTarget "EKDropBubbleMenuTests" */;
+			buildPhases = (
+				DBA03CA81AF0168F002AC356 /* Sources */,
+				DBA03CA91AF0168F002AC356 /* Frameworks */,
+				DBA03CAA1AF0168F002AC356 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBA03CAE1AF0168F002AC356 /* PBXTargetDependency */,
+			);
+			name = EKDropBubbleMenuTests;
+			productName = EKDropBubbleMenuTests;
+			productReference = DBA03CAC1AF0168F002AC356 /* EKDropBubbleMenuTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DBA03C8F1AF0168E002AC356 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = tooploox.com;
+				TargetAttributes = {
+					DBA03C961AF0168E002AC356 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					DBA03CAB1AF0168F002AC356 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = DBA03C961AF0168E002AC356;
+					};
+				};
+			};
+			buildConfigurationList = DBA03C921AF0168E002AC356 /* Build configuration list for PBXProject "EKDropBubbleMenu" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DBA03C8E1AF0168E002AC356;
+			productRefGroup = DBA03C981AF0168E002AC356 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DBA03C961AF0168E002AC356 /* EKDropBubbleMenu */,
+				DBA03CAB1AF0168F002AC356 /* EKDropBubbleMenuTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DBA03C951AF0168E002AC356 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBA03CA21AF0168E002AC356 /* Main.storyboard in Resources */,
+				DBA03CA71AF0168E002AC356 /* LaunchScreen.xib in Resources */,
+				DBA03CA41AF0168E002AC356 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBA03CAA1AF0168F002AC356 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DBA03C931AF0168E002AC356 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBA03CBE1AF017DF002AC356 /* EKDropBubbleMenu.swift in Sources */,
+				DBA03C9F1AF0168E002AC356 /* ViewController.swift in Sources */,
+				DBA03C9D1AF0168E002AC356 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBA03CA81AF0168F002AC356 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBA03CB31AF0168F002AC356 /* EKDropBubbleMenuTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DBA03CAE1AF0168F002AC356 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBA03C961AF0168E002AC356 /* EKDropBubbleMenu */;
+			targetProxy = DBA03CAD1AF0168F002AC356 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DBA03CA01AF0168E002AC356 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBA03CA11AF0168E002AC356 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DBA03CA51AF0168E002AC356 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBA03CA61AF0168E002AC356 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DBA03CB41AF0168F002AC356 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DBA03CB51AF0168F002AC356 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DBA03CB71AF0168F002AC356 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EKDropBubbleMenu/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DBA03CB81AF0168F002AC356 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EKDropBubbleMenu/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DBA03CBA1AF0168F002AC356 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EKDropBubbleMenuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EKDropBubbleMenu.app/EKDropBubbleMenu";
+			};
+			name = Debug;
+		};
+		DBA03CBB1AF0168F002AC356 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EKDropBubbleMenuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EKDropBubbleMenu.app/EKDropBubbleMenu";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DBA03C921AF0168E002AC356 /* Build configuration list for PBXProject "EKDropBubbleMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBA03CB41AF0168F002AC356 /* Debug */,
+				DBA03CB51AF0168F002AC356 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBA03CB61AF0168F002AC356 /* Build configuration list for PBXNativeTarget "EKDropBubbleMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBA03CB71AF0168F002AC356 /* Debug */,
+				DBA03CB81AF0168F002AC356 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DBA03CB91AF0168F002AC356 /* Build configuration list for PBXNativeTarget "EKDropBubbleMenuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBA03CBA1AF0168F002AC356 /* Debug */,
+				DBA03CBB1AF0168F002AC356 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DBA03C8F1AF0168E002AC356 /* Project object */;
+}
