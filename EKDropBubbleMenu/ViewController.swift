@@ -12,15 +12,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        EKDropBubbleMenu().createMenu(self, position: CGPointMake(200, 200))
-        // Do any additional setup after loading the view, typically from a nib.
+        EKDropBubbleMenu().createMenu(self, position: CGPointMake(200, 200), arrowPosition: .Up)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
