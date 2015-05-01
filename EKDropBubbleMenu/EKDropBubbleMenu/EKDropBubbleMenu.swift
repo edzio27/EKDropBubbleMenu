@@ -23,11 +23,13 @@ class EKDropBubbleMenu: UIViewController {
     private let buttonSize: CGFloat = 40.0
     private let buttonImagePadding: CGFloat = 12.0
     private let rotateAnimationDuration = 0.2
+    private let hideButtonsAnimationDuration = 0.2
+    private let showButtonsAnimationDuration = 0.6
     private let spaceBetweenButtonsCenter: CGFloat = 50.0
     
     private var menuButton = UIButton()
     private var containerButton: [UIButton] = []
-    private let menuButtonImageView = UIImageView(image: UIImage(named: "Arrow"))
+    private let menuButtonImageView = UIImageView(image: UIImage(named: "ArrowGray"))
     private var rotateCount = 0
     private var position: CGPoint!
     private var initialCorner: CGFloat!
@@ -51,6 +53,26 @@ class EKDropBubbleMenu: UIViewController {
         containerButton.append(button)
         view.insertSubview(button, belowSubview: menuButton)
         button.hidden = true
+    }
+    
+    func showButtons() {
+        for i in 0..<containerButton.count {
+            containerButton[i].hidden = false
+            UIView.animateWithDuration(showButtonsAnimationDuration, delay: 0.0, usingSpringWithDamping: 50.0, initialSpringVelocity: 25.0, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
+                self.containerButton[i].frame = CGRectMake(self.position.x, (self.position.y + CGFloat(i + 1) * self.spaceBetweenButtonsCenter), self.buttonSize, self.buttonSize)
+                }, completion: { (success: Bool) -> Void in
+            })
+        }
+    }
+    
+    func hideButtons() {
+        for i in 0..<containerButton.count {
+            UIView.animateWithDuration(hideButtonsAnimationDuration, delay: 0.0, options: UIViewAnimationOptions.TransitionNone, animations: { () in
+                self.containerButton[i].frame = CGRectMake(self.position.x, self.position.y, self.buttonSize, self.buttonSize)
+                }) { _ in
+                    self.containerButton[i].hidden = true
+            }
+        }
     }
     
     // MARK: - Privates
@@ -102,32 +124,11 @@ class EKDropBubbleMenu: UIViewController {
     }
     
     func rotateArrowButton() {
-        manageItemButtons(buttonsAreShown)
+        buttonsAreShown ? hideButtons() : showButtons()
         UIView.animateWithDuration(rotateAnimationDuration, animations: {
             self.menuButtonImageView.transform = CGAffineTransformMakeRotation((self.initialCorner + 180.0 * CGFloat(self.rotateCount) * CGFloat(M_PI)) / 180.0)
             self.rotateCount++
         })
         buttonsAreShown = !buttonsAreShown
-    }
-    
-    private func manageItemButtons(show: Bool) {
-        if (buttonsAreShown) {
-            for i in 0..<containerButton.count {
-                UIView.animateWithDuration(rotateAnimationDuration, delay: 0.0, options: UIViewAnimationOptions.TransitionNone, animations: { () in
-                    self.containerButton[i].frame = CGRectMake(self.position.x, self.position.y, self.buttonSize, self.buttonSize)
-                }) { _ in
-                    self.containerButton[i].hidden = true
-                }
-            }
-        } else {
-            for i in 0..<containerButton.count {
-                containerButton[i].hidden = false
-                UIView.animateWithDuration(rotateAnimationDuration, delay: 0.0, options: UIViewAnimationOptions.TransitionNone, animations: { () in
-                    self.containerButton[i].frame = CGRectMake(self.position.x, (self.position.y + CGFloat(i + 1) * self.spaceBetweenButtonsCenter), self.buttonSize, self.buttonSize)
-                }) { _ in
-                        
-                }
-            }
-        }
     }
 }

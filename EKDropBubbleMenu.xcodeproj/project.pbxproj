@@ -14,6 +14,7 @@
 		DBA03CA71AF0168E002AC356 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBA03CA51AF0168E002AC356 /* LaunchScreen.xib */; };
 		DBA03CB31AF0168F002AC356 /* EKDropBubbleMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA03CB21AF0168F002AC356 /* EKDropBubbleMenuTests.swift */; };
 		DBA03CBE1AF017DF002AC356 /* EKDropBubbleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA03CBD1AF017DF002AC356 /* EKDropBubbleMenu.swift */; };
+		DBA03CC01AF3CC65002AC356 /* EKButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA03CBF1AF3CC65002AC356 /* EKButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		DBA03CB11AF0168F002AC356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBA03CB21AF0168F002AC356 /* EKDropBubbleMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKDropBubbleMenuTests.swift; sourceTree = "<group>"; };
 		DBA03CBD1AF017DF002AC356 /* EKDropBubbleMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EKDropBubbleMenu.swift; sourceTree = "<group>"; };
+		DBA03CBF1AF3CC65002AC356 /* EKButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EKButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				DBA03CBD1AF017DF002AC356 /* EKDropBubbleMenu.swift */,
+				DBA03CBF1AF3CC65002AC356 /* EKButton.swift */,
 			);
 			path = EKDropBubbleMenu;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBA03CBE1AF017DF002AC356 /* EKDropBubbleMenu.swift in Sources */,
+				DBA03CC01AF3CC65002AC356 /* EKButton.swift in Sources */,
 				DBA03C9F1AF0168E002AC356 /* ViewController.swift in Sources */,
 				DBA03C9D1AF0168E002AC356 /* AppDelegate.swift in Sources */,
 			);

@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EKDropBubbleMenu/EKDropBubbleMenu/EKDropBubbleMenu.swift"
-            timestampString = "452179615.239464"
+            timestampString = "452200930.371603"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
-            landmarkName = "manageItemButtons(_:)"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "addButton(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EKDropBubbleMenu/EKDropBubbleMenu/EKDropBubbleMenu.swift"
-            timestampString = "452179615.239464"
+            filePath = "EKDropBubbleMenu/EKDropBubbleMenu/EKButton.swift"
+            timestampString = "452185392.812466"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "addButton(_:)"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "init()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EKDropBubbleMenu/EKDropBubbleMenu/EKButton.swift"
+            timestampString = "452185412.115773"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "init(frame:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

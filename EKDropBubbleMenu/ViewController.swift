@@ -12,20 +12,20 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         var menu = EKDropBubbleMenu()
-        menu.createMenu(self, position: CGPointMake(200, 200), arrowPosition: .Down)
-        menu.addButton(UIButton())
-        menu.addButton(UIButton())
-        menu.addButton(UIButton())
-        menu.addButton(UIButton())
-        menu.addButton(UIButton())
-        menu.addButton(UIButton())
-        menu.addButton(UIButton())
-        menu.addButton(UIButton())
-        menu.addButton(UIButton())
-        menu.addButton(UIButton())
-        menu.addButton(UIButton())
-
+        menu.createMenu(self, position: CGPointMake(50, 50), arrowPosition: .Down)
+        
+        var button1 = EKButton()
+        var button2 = EKButton()
+        button1.onButtonPressed = { () in
+            // TODO: Button clicked
+        }
+        menu.addButton(button1)
+        button2.onButtonPressed = { () in
+            // TODO: Button clicked
+        }
+        menu.addButton(button2)
     }
 
     override func didReceiveMemoryWarning() {
