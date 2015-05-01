@@ -22,12 +22,11 @@ class EKDropBubbleMenu: UIViewController {
     
     private let buttonSize: CGFloat = 40.0
     private let buttonImagePadding: CGFloat = 12.0
-    private let rotateAnimationDuration = 0.5
+    private let rotateAnimationDuration = 0.2
+    private let spaceBetweenButtonsCenter = 50.0
     
     private var menuButton = UIButton()
-    private var itemButton1 = UIButton()
-    private var itemButton2 = UIButton()
-    private var itemButton3 = UIButton()
+    private var containerButton: [UIButton] = []
     private let menuButtonImageView = UIImageView(image: UIImage(named: "Arrow"))
     private var rotateCount = 1
     private var arrow: ArrowPosition?
@@ -37,19 +36,22 @@ class EKDropBubbleMenu: UIViewController {
     func createMenu(viewController: UIViewController, position: CGPoint, arrowPosition: ArrowPosition) {
         arrow = arrowPosition
         customizeViews(position)
-        view.addSubview(itemButton1)
-        view.addSubview(itemButton2)
-        view.addSubview(itemButton3)
         view.addSubview(menuButton)
-        
         viewController.addChildViewController(self)
         viewController.view.addSubview(view)
-        self.didMoveToParentViewController(viewController)
+        didMoveToParentViewController(viewController)
     }
+    
+    func addButton(button: UIButton) {
+        containerButton.append(button)
+        view.addSubview(button)
+    }
+    
+    // MARK: - Privates
     
     private func customizeViews(position: CGPoint) {
         customizeMainButton(position)
-        customizeItemButton(position)
+        customizeButtonsInContainer(position)
     }
     
     private func customizeMainButton(position: CGPoint) {
@@ -72,30 +74,16 @@ class EKDropBubbleMenu: UIViewController {
         menuButton.addSubview(menuButtonImageView)
     }
     
-    private func customizeItemButton(position: CGPoint) {
-        itemButton1.frame = CGRectMake(position.x + buttonSize / 2, position.y + buttonSize / 2, 0, 0)
-        itemButton1.layer.cornerRadius = buttonSize / 2
-        itemButton1.layer.shadowColor = UIColor.grayColor().CGColor
-        itemButton1.layer.shadowOffset = CGSizeMake(2, 2)
-        itemButton1.layer.shadowRadius = 2
-        itemButton1.layer.shadowOpacity = 0.5
-        itemButton1.backgroundColor = UIColor.orangeColor()
-        
-        itemButton2.frame = CGRectMake(position.x + buttonSize / 2, position.y + buttonSize / 2, 0, 0)
-        itemButton2.layer.cornerRadius = buttonSize / 2
-        itemButton2.layer.shadowColor = UIColor.grayColor().CGColor
-        itemButton2.layer.shadowOffset = CGSizeMake(2, 2)
-        itemButton2.layer.shadowRadius = 2
-        itemButton2.layer.shadowOpacity = 0.5
-        itemButton2.backgroundColor = UIColor.orangeColor()
-        
-        itemButton3.frame = CGRectMake(position.x + buttonSize / 2, position.y + buttonSize / 2, 0, 0)
-        itemButton3.layer.cornerRadius = buttonSize / 2
-        itemButton3.layer.shadowColor = UIColor.grayColor().CGColor
-        itemButton3.layer.shadowOffset = CGSizeMake(2, 2)
-        itemButton3.layer.shadowRadius = 2
-        itemButton3.layer.shadowOpacity = 0.5
-        itemButton3.backgroundColor = UIColor.orangeColor()
+    private func customizeButtonsInContainer(position: CGPoint) {
+        for button in containerButton {
+            button.frame = CGRectMake(position.x + buttonSize / 2, position.y + buttonSize / 2, 0, 0)
+            button.layer.cornerRadius = buttonSize / 2
+            button.layer.shadowColor = UIColor.grayColor().CGColor
+            button.layer.shadowOffset = CGSizeMake(2, 2)
+            button.layer.shadowRadius = 2
+            button.layer.shadowOpacity = 0.5
+            button.backgroundColor = UIColor.orangeColor()
+        }
     }
 
     
@@ -123,22 +111,12 @@ class EKDropBubbleMenu: UIViewController {
     }
     
     func transformItemButton() {
-        UIView.animateWithDuration(rotateAnimationDuration, delay: 0.0, options: UIViewAnimationOptions.TransitionNone, animations: { () -> Void in
-            self.itemButton1.frame = CGRectMake(200, 150, self.buttonSize, self.buttonSize)
-        }) { (success: Bool) -> Void in
-
-        }
-        
-        UIView.animateWithDuration(rotateAnimationDuration, delay: 0.0, options: UIViewAnimationOptions.TransitionNone, animations: { () -> Void in
-            self.itemButton2.frame = CGRectMake(200, 100, self.buttonSize, self.buttonSize)
-            }) { (success: Bool) -> Void in
-                
-        }
-        
-        UIView.animateWithDuration(rotateAnimationDuration, delay: 0.0, options: UIViewAnimationOptions.TransitionNone, animations: { () -> Void in
-            self.itemButton3.frame = CGRectMake(200, 50, self.buttonSize, self.buttonSize)
-            }) { (success: Bool) -> Void in
-                
+        for i in 0..<containerButton.count {
+            UIView.animateWithDuration(rotateAnimationDuration, delay: 0.0, options: UIViewAnimationOptions.TransitionNone, animations: { () in
+                self.containerButton[i].frame = CGRectMake(200, 100, self.buttonSize, self.buttonSize)
+                }) { _ in
+                    
+            }
         }
     }
 }

@@ -12,7 +12,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        EKDropBubbleMenu().createMenu(self, position: CGPointMake(200, 200), arrowPosition: .Up)
+        var menu = EKDropBubbleMenu()
+        menu.createMenu(self, position: CGPointMake(200, 200), arrowPosition: .Up)
+        menu.addButton(UIButton())
+        menu.addButton(UIButton())
     }
 
     override func didReceiveMemoryWarning() {
