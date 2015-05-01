@@ -23,19 +23,23 @@ class EKDropBubbleMenu: UIViewController {
     private let buttonSize: CGFloat = 40.0
     private let buttonImagePadding: CGFloat = 12.0
     private let rotateAnimationDuration = 0.2
-    private let spaceBetweenButtonsCenter = 50.0
+    private let spaceBetweenButtonsCenter: CGFloat = 50.0
     
     private var menuButton = UIButton()
     private var containerButton: [UIButton] = []
     private let menuButtonImageView = UIImageView(image: UIImage(named: "Arrow"))
-    private var rotateCount = 1
+    private var rotateCount = 0
+    private var position: CGPoint!
+    private var initialCorner: CGFloat!
+    private var buttonsAreShown = false
     private var arrow: ArrowPosition?
     
     // MARK: - Publics
     
     func createMenu(viewController: UIViewController, position: CGPoint, arrowPosition: ArrowPosition) {
+        self.position = position
         arrow = arrowPosition
-        customizeViews(position)
+        customizeMainButton(position)
         view.addSubview(menuButton)
         viewController.addChildViewController(self)
         viewController.view.addSubview(view)
@@ -43,16 +47,13 @@ class EKDropBubbleMenu: UIViewController {
     }
     
     func addButton(button: UIButton) {
+        customizeButton(button)
         containerButton.append(button)
-        view.addSubview(button)
+        view.insertSubview(button, belowSubview: menuButton)
+        button.hidden = true
     }
     
     // MARK: - Privates
-    
-    private func customizeViews(position: CGPoint) {
-        customizeMainButton(position)
-        customizeButtonsInContainer(position)
-    }
     
     private func customizeMainButton(position: CGPoint) {
         menuButton.frame = CGRectMake(position.x, position.y, buttonSize, buttonSize)
@@ -74,48 +75,58 @@ class EKDropBubbleMenu: UIViewController {
         menuButton.addSubview(menuButtonImageView)
     }
     
-    private func customizeButtonsInContainer(position: CGPoint) {
-        for button in containerButton {
-            button.frame = CGRectMake(position.x + buttonSize / 2, position.y + buttonSize / 2, 0, 0)
-            button.layer.cornerRadius = buttonSize / 2
-            button.layer.shadowColor = UIColor.grayColor().CGColor
-            button.layer.shadowOffset = CGSizeMake(2, 2)
-            button.layer.shadowRadius = 2
-            button.layer.shadowOpacity = 0.5
-            button.backgroundColor = UIColor.orangeColor()
-        }
+    private func customizeButton(button: UIButton) {
+        button.frame = CGRectMake(position.x + buttonSize / 2, position.y + buttonSize / 2, 0, 0)
+        button.layer.cornerRadius = buttonSize / 2
+        button.layer.shadowColor = UIColor.grayColor().CGColor
+        button.layer.shadowOffset = CGSizeMake(2, 2)
+        button.layer.shadowRadius = 2
+        button.layer.shadowOpacity = 0.5
+        button.backgroundColor = UIColor.orangeColor()
     }
-
     
     private func prepareImageForArrowPosition(position: ArrowPosition?) {
         if let position = position {
             switch(position) {
             case .Up:
-                menuButtonImageView.transform = CGAffineTransformMakeRotation((90.0 * CGFloat(M_PI)) / 180.0)
+                initialCorner = 90.0
             case .Right:
-                menuButtonImageView.transform = CGAffineTransformMakeRotation((180.0 * CGFloat(M_PI)) / 180.0)
+                initialCorner = 180.0
             case .Down:
-                menuButtonImageView.transform = CGAffineTransformMakeRotation((270.0 * CGFloat(M_PI)) / 180.0)
+                initialCorner = 270.0
             default:
                 return
             }
+            menuButtonImageView.transform = CGAffineTransformMakeRotation((initialCorner * CGFloat(M_PI)) / 180.0)
         }
     }
     
     func rotateArrowButton() {
-        transformItemButton()
+        manageItemButtons(buttonsAreShown)
         UIView.animateWithDuration(rotateAnimationDuration, animations: {
-            self.menuButtonImageView.transform = CGAffineTransformMakeRotation((180.0 * CGFloat(self.rotateCount) * CGFloat(M_PI)) / 180.0)
+            self.menuButtonImageView.transform = CGAffineTransformMakeRotation((self.initialCorner + 180.0 * CGFloat(self.rotateCount) * CGFloat(M_PI)) / 180.0)
             self.rotateCount++
         })
+        buttonsAreShown = !buttonsAreShown
     }
     
-    func transformItemButton() {
-        for i in 0..<containerButton.count {
-            UIView.animateWithDuration(rotateAnimationDuration, delay: 0.0, options: UIViewAnimationOptions.TransitionNone, animations: { () in
-                self.containerButton[i].frame = CGRectMake(200, 100, self.buttonSize, self.buttonSize)
+    private func manageItemButtons(show: Bool) {
+        if (buttonsAreShown) {
+            for i in 0..<containerButton.count {
+                UIView.animateWithDuration(rotateAnimationDuration, delay: 0.0, options: UIViewAnimationOptions.TransitionNone, animations: { () in
+                    self.containerButton[i].frame = CGRectMake(self.position.x, self.position.y, self.buttonSize, self.buttonSize)
                 }) { _ in
-                    
+                    self.containerButton[i].hidden = true
+                }
+            }
+        } else {
+            for i in 0..<containerButton.count {
+                containerButton[i].hidden = false
+                UIView.animateWithDuration(rotateAnimationDuration, delay: 0.0, options: UIViewAnimationOptions.TransitionNone, animations: { () in
+                    self.containerButton[i].frame = CGRectMake(self.position.x, (self.position.y + CGFloat(i + 1) * self.spaceBetweenButtonsCenter), self.buttonSize, self.buttonSize)
+                }) { _ in
+                        
+                }
             }
         }
     }

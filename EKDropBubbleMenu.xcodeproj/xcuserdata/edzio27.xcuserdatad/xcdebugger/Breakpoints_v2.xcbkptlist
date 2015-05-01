@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EKDropBubbleMenu/EKDropBubbleMenu/EKDropBubbleMenu.swift"
-            timestampString = "452172338.68036"
+            timestampString = "452179615.239464"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
-            landmarkName = "transformItemButton()"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "manageItemButtons(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,28 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EKDropBubbleMenu/EKDropBubbleMenu/EKDropBubbleMenu.swift"
-            timestampString = "452172285.598494"
+            timestampString = "452179615.239464"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "addButton(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EKDropBubbleMenu/EKDropBubbleMenu/EKDropBubbleMenu.swift"
-            timestampString = "452172347.499808"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
-            landmarkName = "transformItemButton()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
