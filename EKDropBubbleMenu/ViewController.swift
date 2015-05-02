@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         var menu = EKDropBubbleMenu()
-        menu.createMenu(self, position: CGPointMake(50, 50), arrowPosition: .Down)
+        menu.createMenu(self, position: CGPointMake(150, 150), menuDirection: .Down)
         
         var button1 = EKButton()
         var button2 = EKButton()
