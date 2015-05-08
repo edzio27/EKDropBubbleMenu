@@ -30,7 +30,7 @@ class EKDropBubbleMenu: UIViewController {
     private var menuButton = UIButton()
     private var containerButton: [UIButton] = []
     private let menuButtonImageView = UIImageView(image: UIImage(named: "ArrowGray"))
-    private var rotateCount = 0
+    private var rotateCount = 1
     private var position: CGPoint!
     private var initialCorner: CGFloat!
     private var buttonsAreShown = false
@@ -83,6 +83,7 @@ class EKDropBubbleMenu: UIViewController {
                 }
             }
         }
+        animateButtonRotation()
     }
     
     func hideButtons() {
@@ -93,6 +94,7 @@ class EKDropBubbleMenu: UIViewController {
                 self.containerButton[i].hidden = true
             }
         }
+        animateButtonRotation()
     }
     
     // MARK: - Privates
@@ -105,7 +107,7 @@ class EKDropBubbleMenu: UIViewController {
         menuButton.layer.shadowRadius = 2
         menuButton.layer.shadowOpacity = 0.5
         menuButton.backgroundColor = UIColor.orangeColor()
-        menuButton.addTarget(self, action: "rotateArrowButton", forControlEvents: UIControlEvents.TouchUpInside)
+        menuButton.addTarget(self, action: "mainButtonPressed", forControlEvents: UIControlEvents.TouchUpInside)
         
         prepareImageForInitialMenuDirection(direction)
         menuButtonImageView.frame = CGRectMake(
@@ -143,12 +145,18 @@ class EKDropBubbleMenu: UIViewController {
         }
     }
     
-    func rotateArrowButton() {
+    func mainButtonPressed() {
         buttonsAreShown ? hideButtons() : showButtons()
+
+    }
+    
+    private func animateButtonRotation() {
         UIView.animateWithDuration(rotateAnimationDuration, animations: {
-            self.menuButtonImageView.transform = CGAffineTransformMakeRotation((self.initialCorner + 180.0 * CGFloat(self.rotateCount) * CGFloat(M_PI)) / 180.0)
+            self.menuButtonImageView.transform = CGAffineTransformMakeRotation(
+                ((self.initialCorner + 180.0 * CGFloat(self.rotateCount)) * CGFloat(M_PI)) / 180.0)
             self.rotateCount++
         })
         buttonsAreShown = !buttonsAreShown
     }
+    
 }

@@ -14,18 +14,28 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         var menu = EKDropBubbleMenu()
-        menu.createMenu(self, position: CGPointMake(150, 150), menuDirection: .Down)
-        
+        menu.createMenu(self, position: CGPointMake(20, 510), menuDirection: .Up)
         var button1 = EKButton()
         var button2 = EKButton()
+        var button3 = EKButton()
         button1.onButtonPressed = { () in
-            // TODO: Button clicked
+            var alertView = UIAlertView(title: "Button 1 clicked", message: "", delegate: self, cancelButtonTitle: "OK")
+            alertView.show()
+            menu.hideButtons()
         }
         menu.addButton(button1)
         button2.onButtonPressed = { () in
-            // TODO: Button clicked
+            var alertView = UIAlertView(title: "Button 2 clicked", message: "", delegate: self, cancelButtonTitle: "OK")
+            alertView.show()
+            menu.hideButtons()
         }
         menu.addButton(button2)
+        button3.onButtonPressed = { () in
+            var alertView = UIAlertView(title: "Button 3 clicked", message: "", delegate: self, cancelButtonTitle: "OK")
+            alertView.show()
+            menu.hideButtons()
+        }
+        menu.addButton(button3)
     }
 
     override func didReceiveMemoryWarning() {
