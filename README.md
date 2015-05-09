@@ -2,7 +2,7 @@
 
 EKDropBubbleMenu is a nice animated menu library written in Swift.
 
-![Tutorial](https://github.com/edzio27/EKDropBubbleMenu/blob/master/tutorial.gif)
+<p align="center">![Tutorial](https://github.com/edzio27/EKDropBubbleMenu/blob/master/tutorial.gif)</p>
 
 ## Installation
 
@@ -14,9 +14,8 @@ To use **EKDropBubbleMenu** just copy folder `EKDropBubbleMenu` directly in your
 ```swift
 var menu = EKDropBubbleMenu()
 ```
-**Call method createMenu with three parameters:**
-
-`viewController` - define controller where menu should be displayed
+**Call method createMenu with three parameters:**\n
+`viewController` - define controller where menu should be displayed\n
 `position` - define position of main button center
 `menuDirection` - define direction of expand (Up, Down, Left or Right)
 ```swift
