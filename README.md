@@ -2,7 +2,7 @@
 
 EKDropBubbleMenu is a nice animated menu library written in Swift.
 
-!()
+!(https://github.com/edzio27/EKDropBubbleMenu/blob/master/tutorial.gif)
 
 ## Installation
 
