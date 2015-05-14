@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E6154709-CEC0-4B11-9B6F-E5344A3FD849</string>
+	<key>IDESourceControlProjectName</key>
+	<string>EKDropBubbleMenu</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>326336D70A58F931E49FED6984FE7A45E778EA15</key>
+		<string>https://github.com/edzio27/EKDropBubbleMenu.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>EKDropBubbleMenu.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>326336D70A58F931E49FED6984FE7A45E778EA15</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/edzio27/EKDropBubbleMenu.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>326336D70A58F931E49FED6984FE7A45E778EA15</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>326336D70A58F931E49FED6984FE7A45E778EA15</string>
+			<key>IDESourceControlWCCName</key>
+			<string>EKDropBubbleMenu</string>
+		</dict>
+	</array>
+</dict>
+</plist>
