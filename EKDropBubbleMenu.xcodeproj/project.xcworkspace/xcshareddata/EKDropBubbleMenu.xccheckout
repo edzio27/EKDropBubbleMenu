@@ -12,12 +12,16 @@
 	<dict>
 		<key>326336D70A58F931E49FED6984FE7A45E778EA15</key>
 		<string>https://github.com/edzio27/EKDropBubbleMenu.git</string>
+		<key>D343E0872D3C3F181C4F192414469A4281D52AD0</key>
+		<string>https://github.com/edzio27/EKDropBubbleMenu.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>EKDropBubbleMenu.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>326336D70A58F931E49FED6984FE7A45E778EA15</key>
+		<string>../../../EKDropBubbleMenu</string>
+		<key>D343E0872D3C3F181C4F192414469A4281D52AD0</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,7 +29,7 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>326336D70A58F931E49FED6984FE7A45E778EA15</string>
+	<string>D343E0872D3C3F181C4F192414469A4281D52AD0</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>326336D70A58F931E49FED6984FE7A45E778EA15</string>
 			<key>IDESourceControlWCCName</key>
 			<string>EKDropBubbleMenu</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D343E0872D3C3F181C4F192414469A4281D52AD0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>EKDropBubbleMenu-master</string>
 		</dict>
 	</array>
 </dict>

@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:EKDropBubbleMenu.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>
